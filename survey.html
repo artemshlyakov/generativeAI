@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090d15">
+<title>Анкета — GENESIS AI</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script><meta name="description" content="GENESIS AI — интерактивная выставка о генеративном искусственном интеллекте и реальных экспериментах с изображениями и видео.">
+<link rel="icon" href="assets/brand/genesis-mark.svg">
+<link rel="alternate icon" href="assets/brand/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+</head>
+<body data-page="survey">
+<a class="skip" href="#main">К содержимому</a><header class="site-header" id="site-header"><div class="header-inner">
+<a class="brand" href="index.html" aria-label="GENESIS AI — главная"><img src="assets/brand/genesis-mark.svg" alt="" width="38" height="38"><span class="brand-name">GENESIS <b>AI</b><small>Лаборатория нового</small></span></a><nav id="primary-nav" class="primary-nav" aria-label="Основная навигация"><a href="index.html">Выставка</a><a href="experiment.html">Эксперименты</a><a href="technology.html">Технологии</a><a href="gallery.html">Медиа</a><a href="survey.html" aria-current="page">Анкета</a></nav><button class="menu-toggle" id="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+</div></header><main id="main"><section class="page-lead reveal"><p class="eyebrow">04 / ОБРАТНАЯ СВЯЗЬ</p>
+<h1>Ваш взгляд<br><em>на выставку.</em>
+</h1>
+<p>Учебная анкета демонстрирует HTML-форму и события JavaScript. Ответ виден только в браузере и не отправляется на сервер.</p></section><section class="section reveal"><form class="survey" id="visitor-survey" name="visitorSurvey">
+<div class="form-grid">
+<label>Имя<input name="visitorName" type="text" autocomplete="name" required placeholder="Как к вам обращаться"></label><label>Электронная почта<input name="visitorEmail" type="email" autocomplete="email" required placeholder="name@example.com"></label><label>Телефон<input name="visitorPhone" type="tel" autocomplete="tel" required placeholder="+7 900 000 00 00"></label><label>Что интересует больше всего<select name="favoriteMedium" required><option value="">Выберите направление</option>
+<option>Текст</option>
+<option>Изображения</option>
+<option>Видео</option>
+<option>Звук</option></select></label>
+</div>
+<fieldset>
+<legend>Какая версия города понравилась?</legend>
+<label><input type="radio" name="preferredScene" value="day" required> Дневная</label><label><input type="radio" name="preferredScene" value="night"> Ночная</label>
+</fieldset>
+<label>Какие темы изучить дальше?<select name="futureTopics" multiple size="4"><option value="prompts">Промпты</option>
+<option value="video">Генерация видео</option>
+<option value="sound">Генерация звука</option>
+<option value="ethics">Этика и права</option></select><small>Для нескольких пунктов удерживайте Ctrl или ⌘.</small></label><label>Комментарий<textarea name="visitorComment" rows="5" placeholder="Что запомнилось?"></textarea></label><div class="form-actions">
+<button class="button" type="submit">Показать итог ↗</button><button class="text-link" type="reset">Очистить</button>
+</div>
+<p id="survey-result" role="status" aria-live="polite"></p>
+</form></section></main><footer class="site-footer"><div class="footer-inner">
+<a class="brand" href="index.html" aria-label="GENESIS AI — главная"><img src="assets/brand/genesis-mark.svg" alt="" width="34" height="34"><span class="brand-name">GENESIS <b>AI</b></span></a><p>Учебная цифровая выставка<br>«Искусственный интеллект: генеративные технологии»</p>
+<a class="footer-link" href="gallery.html">Паспорт материалов <span aria-hidden="true">↗</span></a>
+</div></footer>
+</body>
+</html>

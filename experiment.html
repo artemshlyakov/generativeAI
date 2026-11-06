@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090d15">
+<title>Эксперименты — GENESIS AI</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script><meta name="description" content="GENESIS AI — интерактивная выставка о генеративном искусственном интеллекте и реальных экспериментах с изображениями и видео.">
+<link rel="icon" href="assets/brand/genesis-mark.svg">
+<link rel="alternate icon" href="assets/brand/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+</head>
+<body data-page="experiment">
+<a class="skip" href="#main">К содержимому</a><header class="site-header" id="site-header"><div class="header-inner">
+<a class="brand" href="index.html" aria-label="GENESIS AI — главная"><img src="assets/brand/genesis-mark.svg" alt="" width="38" height="38"><span class="brand-name">GENESIS <b>AI</b><small>Лаборатория нового</small></span></a><nav id="primary-nav" class="primary-nav" aria-label="Основная навигация"><a href="index.html">Выставка</a><a href="experiment.html" aria-current="page">Эксперименты</a><a href="technology.html">Технологии</a><a href="gallery.html">Медиа</a><a href="survey.html">Анкета</a></nav><button class="menu-toggle" id="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+</div></header><main id="main"><section class="page-lead reveal"><p class="eyebrow">01 / ЛАБОРАТОРИЯ</p>
+<h1>Управляйте<br><em>переменой.</em>
+</h1>
+<p>Реальные результаты генерации и редактирования изображений. Двигайте ползунок, читайте запросы и сравнивайте ограничения.</p></section><section class="section reveal" id="light"><div class="section-head">
+<div>
+<p class="eyebrow">ЭКСПЕРИМЕНТ 01 / IMAGE EDITING</p>
+<h2>Один город. Два времени.</h2>
+</div>
+<p>Слева день, справа ночь. Перемещайте ползунок мышью, касанием или стрелками клавиатуры.</p>
+</div>
+<div class="compare" id="comparison" aria-label="Интерактивное сравнение дневного и ночного изображения">
+<img src="assets/night-ai.png" alt="Ночная версия города будущего"><div class="compare-day"><img src="assets/day-ai.png" alt="Дневная версия того же города"></div>
+<div class="compare-line" aria-hidden="true"><span>↔</span></div>
+<span class="compare-label l">День</span><span class="compare-label r">Ночь</span><input id="compare-range" type="range" min="0" max="100" value="50" aria-label="Доля дневной версии">
+</div>
+<p class="compare-hint">Передвиньте границу для сравнения <span aria-hidden="true">↔</span></p>
+<div class="caption-grid">
+<p><b>Модель:</b> ChatGPT Images. Два независимых редактирования одного исходного кадра. Точная версия модели не показана инструментом. <b>Дата:</b> 05.11.2026.</p>
+<p><b>Наблюдение:</b> башни, мосты, рельсы и положение трамвая близки; мелкие детали, фигуры людей и отдельные элементы фасадов не совпадают идеально.</p>
+</div>
+<details><summary>Исходный запрос и инструкции редактирования</summary><div class="details-body">
+<h3>Базовый кадр</h3>
+<p>Create a refined cinematic concept art image for a modern digital museum exhibition about generative AI. A visionary future city boulevard at blue hour, symmetrical street-level perspective, lush planted terraces integrated in architecture, a sleek tram in the center, human-scale pedestrians, atmospheric violet and teal light, careful coherent architectural geometry, no lettering, no logo, no text. Wide 16:9 composition, editorial art direction, highly detailed but tasteful, premium science museum feel. This is an original generated visual exhibit.</p>
+<h3>День</h3>
+<p>Edit the supplied image as an architectural continuity study. Produce a photorealistic clear DAY version of precisely the same future-city boulevard. Preserve the exact framing and perspective, every major building outline, the left and right curved rooflines, central slender towers and two bridges, tree positions, sidewalk and rail lines, and the tram's position and silhouette. Change ONLY lighting and atmosphere: crisp late morning sun, pale cyan sky, believable daylight reflections, natural green foliage, illuminated by sunlight rather than magenta lights. No new buildings, vehicles, signs or camera shift. No added text. High resolution wide composition.</p>
+<h3>Ночь</h3>
+<p>Edit the supplied image as an architectural continuity study. Produce a photorealistic NIGHT version of precisely the same future-city boulevard. Preserve the exact framing and perspective, every major building outline, left and right curved rooflines, central slender towers and two bridges, tree positions, sidewalk and rail lines, and the tram's position and silhouette. Change ONLY lighting and atmosphere: deep cobalt night sky, realistic warm windows, restrained violet and cyan architectural lighting and wet pavement reflections. Keep people and tram in the same locations. No new buildings, vehicles, signs or camera shift. No added text. High resolution wide composition.</p>
+</div></details></section><section class="section reveal" id="prompt"><div class="section-head">
+<div>
+<p class="eyebrow">ЭКСПЕРИМЕНТ 02 / TEXT TO IMAGE</p>
+<h2>Сила промпта</h2>
+</div>
+<p>Две независимые генерации ChatGPT Images на одну тему. У них нет общего исходного кадра.</p>
+</div>
+<div class="prompt-grid">
+<figure><img src="assets/simple-prompt-ai.png" alt="Город по короткому запросу с крупным трамваем и вывесками"><figcaption><span>КОРОТКИЙ ЗАПРОС</span><q>A futuristic city street with a tram.</q></figcaption></figure><figure><img src="assets/city-ai.png" alt="Город по подробному запросу с центральным трамваем"><figcaption><span>ПОДРОБНЫЙ ЗАПРОС</span><details class="prompt-detail"><summary>Показать полный запрос</summary><q>Create a refined cinematic concept art image for a modern digital museum exhibition about generative AI. A visionary future city boulevard at blue hour, symmetrical street-level perspective, lush planted terraces integrated in architecture, a sleek tram in the center, human-scale pedestrians, atmospheric violet and teal light, careful coherent architectural geometry, no lettering, no logo, no text. Wide 16:9 composition, editorial art direction, highly detailed but tasteful, premium science museum feel. This is an original generated visual exhibit.</q></details></figcaption></figure>
+</div>
+<div class="insight">
+<strong>Что видно</strong><p>Короткая фраза оставила модели свободу: трамвай занял большую часть кадра, добавились вывески. Подробный запрос задал симметрию, центральное расположение трамвая, свет и палитру. Это один опыт, а не доказательство, что длинный запрос всегда даёт лучший результат.</p>
+</div></section><section class="section reveal" id="models"><div class="section-head">
+<div>
+<p class="eyebrow">ЭКСПЕРИМЕНТ 03 / СРАВНЕНИЕ</p>
+<h2>Одна задача. Две модели.</h2>
+</div>
+<p>Две независимые генерации по одному и тому же запросу без референса. Это результаты конкретных попыток, а не общий рейтинг моделей.</p>
+</div>
+<div class="model-grid">
+<article class="model-card"><img src="assets/city-ai.png" alt="Результат ChatGPT Images"><div>
+<small>01 / РЕЗУЛЬТАТ ПОЛУЧЕН</small><h3>ChatGPT Images</h3>
+<p>Симметрия и настроение соответствуют запросу. На трамвае встречается неразборчивый мелкий текст.</p>
+</div></article><article class="model-card"><img src="assets/model-gemini.jpeg" alt="Результат генерации изображения в Gemini по тому же запросу"><div>
+<small>02 / РЕЗУЛЬТАТ ПОЛУЧЕН · 05.11.2026</small><h3>Gemini Images</h3>
+<p>Трамвай смещён вправо, пешеходов больше, силуэт купола задаёт дальний план. На табло трамвая есть нечитаемый текст. Бесплатный режим Gemini; интерфейс не показал точный идентификатор модели.</p>
+</div></article>
+</div>
+<div class="insight">
+<strong>Одинаковые критерии</strong><p>Соответствие запросу, композиция, архитектура, положение трамвая, мелкие детали и текст. Одинаковый текст запроса приведён выше; в Gemini отдельно выбран формат 16:9. Оба результата получены с одной попытки.</p>
+</div></section><section class="section hover-section reveal"><p class="eyebrow">ЛАБОРАТОРНАЯ №11 / СОБЫТИЯ</p>
+<h2>Страница отвечает на действия</h2>
+<div class="hover-demo">
+<p data-effect="color">Первый абзац: при наведении меняется цвет текста.</p>
+<p data-effect="background">Второй абзац: при наведении меняется фон.</p>
+<p data-effect="temporary">Третий абзац: фон появляется только во время наведения.</p>
+</div>
+<button id="ambient-trigger" class="text-link" type="button">Наведите или сфокусируйте — изменится фон страницы ↗</button></section></main><footer class="site-footer"><div class="footer-inner">
+<a class="brand" href="index.html" aria-label="GENESIS AI — главная"><img src="assets/brand/genesis-mark.svg" alt="" width="34" height="34"><span class="brand-name">GENESIS <b>AI</b></span></a><p>Учебная цифровая выставка<br>«Искусственный интеллект: генеративные технологии»</p>
+<a class="footer-link" href="gallery.html">Паспорт материалов <span aria-hidden="true">↗</span></a>
+</div></footer>
+</body>
+</html>
