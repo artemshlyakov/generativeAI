@@ -42,35 +42,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Laboratory 11: document background and three distinct paragraph effects.
+  // Laboratory 11: each change exists only while the pointer is over the text.
   const ambient = document.querySelector('#ambient-trigger');
   if (ambient) {
-    let hovered = false;
-    let focused = false;
-    const updateAmbient = () => root.style.setProperty('--page-bg', hovered || focused ? '#18313a' : '#0b1016');
-    ambient.addEventListener('mouseenter', () => { hovered = true; updateAmbient(); });
-    ambient.addEventListener('mouseleave', () => { hovered = false; updateAmbient(); });
-    ambient.addEventListener('focus', () => { focused = true; updateAmbient(); });
-    ambient.addEventListener('blur', () => { focused = false; updateAmbient(); });
+    ambient.addEventListener('mouseenter', () => root.style.setProperty('--page-bg', '#18313a'));
+    ambient.addEventListener('mouseleave', () => root.style.setProperty('--page-bg', '#0b1016'));
   }
   document.querySelectorAll('[data-effect]').forEach(paragraph => {
-    const applyEffect = () => {
+    paragraph.addEventListener('mouseenter', () => {
       if (paragraph.dataset.effect === 'color') paragraph.style.color = '#a9efcb';
       if (paragraph.dataset.effect === 'background') paragraph.style.backgroundColor = '#344b55';
       if (paragraph.dataset.effect === 'temporary') paragraph.style.backgroundColor = '#31584f';
-    };
-    paragraph.addEventListener('mouseenter', applyEffect);
-    paragraph.addEventListener('focus', applyEffect);
-    if (paragraph.dataset.effect === 'temporary') {
-      const clearTemporary = () => {
-        if (!paragraph.matches(':hover, :focus')) paragraph.style.backgroundColor = '';
-      };
-      paragraph.addEventListener('mouseleave', clearTemporary);
-      paragraph.addEventListener('blur', clearTemporary);
-    }
-  });
-  document.querySelector('#hover-reset')?.addEventListener('click', () => {
-    document.querySelectorAll('[data-effect]').forEach(paragraph => {
+    });
+    paragraph.addEventListener('mouseleave', () => {
       paragraph.style.color = '';
       paragraph.style.backgroundColor = '';
     });
