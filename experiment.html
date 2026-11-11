@@ -6,6 +6,7 @@
 <meta name="theme-color" content="#090d15">
 <title>Эксперименты — GENESIS AI</title>
 <link rel="stylesheet" href="style.css">
+<link rel="preload" as="image" href="assets/day-ai.png" fetchpriority="high">
 <script defer src="script.js"></script><meta name="description" content="GENESIS AI — интерактивная выставка о генеративном искусственном интеллекте и реальных экспериментах с изображениями и видео.">
 <link rel="icon" href="assets/brand/genesis-mark.svg">
 <link rel="alternate icon" href="assets/brand/favicon-32.png">
@@ -24,8 +25,9 @@
 </div>
 <p>Слева день, справа ночь. Перемещайте ползунок мышью, касанием или стрелками клавиатуры.</p>
 </div>
-<div class="compare" id="comparison" aria-label="Интерактивное сравнение дневного и ночного изображения">
-<img src="assets/night-ai.png" alt="Ночная версия города будущего"><div class="compare-day"><img src="assets/day-ai.png" alt="Дневная версия того же города"></div>
+<div class="compare is-loading" id="comparison" aria-label="Интерактивное сравнение дневного и ночного изображения" aria-busy="true">
+<img src="assets/night-ai.png" alt="Ночная версия города будущего"><div class="compare-day"><img src="assets/day-ai.png" alt="Дневная версия того же города" fetchpriority="high"></div>
+<div class="compare-loading" role="status">Загружаем оба изображения для сравнения…</div>
 <div class="compare-line" aria-hidden="true"><span>↔</span></div>
 <span class="compare-label l">День</span><span class="compare-label r">Ночь</span><input id="compare-range" type="range" min="0" max="100" value="50" aria-label="Доля дневной версии">
 </div>
@@ -74,11 +76,11 @@
 </div></section><section class="section hover-section reveal"><p class="eyebrow">ЛАБОРАТОРНАЯ №11 / СОБЫТИЯ</p>
 <h2>Страница отвечает на действия</h2>
 <div class="hover-demo">
-<p data-effect="color">Первый абзац: при наведении меняется цвет текста.</p>
-<p data-effect="background">Второй абзац: при наведении меняется фон.</p>
-<p data-effect="temporary">Третий абзац: фон появляется только во время наведения.</p>
+<p data-effect="color" tabindex="0">Наведите курсор: цвет текста изменится и сохранится до сброса.</p>
+<p data-effect="background" tabindex="0">Наведите курсор: фон изменится и сохранится до сброса.</p>
+<p data-effect="temporary" tabindex="0">Наведите курсор: фон изменится только на время наведения.</p>
 </div>
-<button id="ambient-trigger" class="text-link" type="button">Наведите или сфокусируйте — изменится фон страницы →</button></section><nav class="chapter-nav section" aria-label="Маршрут выставки"><p class="eyebrow">ПРОДОЛЖИТЬ МАРШРУТ</p><div class="chapter-nav__grid"><a class="chapter-nav__card" href="technology.html"><span class="chapter-nav__direction">← Предыдущая глава</span><strong>Технологии</strong><span class="chapter-nav__summary">Как модели создают результат</span></a><a class="chapter-nav__card chapter-nav__card--next" href="gallery.html"><span class="chapter-nav__direction">Следующая глава →</span><strong>Медиа</strong><span class="chapter-nav__summary">Изображения, видео и их происхождение</span></a></div><ol class="journey-progress"><li><a href="index.html"><span>01</span><span>Выставка</span></a></li><li><a href="technology.html"><span>02</span><span>Технологии</span></a></li><li><a href="experiment.html" aria-current="step"><span>03</span><span>Эксперименты</span></a></li><li><a href="gallery.html"><span>04</span><span>Медиа</span></a></li><li><a href="survey.html"><span>05</span><span>Анкета</span></a></li></ol></nav></main><footer class="site-footer"><div class="footer-inner">
+<div class="hover-actions"><button id="ambient-trigger" class="text-link" type="button">Наведите или сфокусируйте — изменится фон страницы →</button><button id="hover-reset" class="text-link" type="button">Сбросить эффекты</button></div></section><nav class="chapter-nav section" aria-label="Маршрут выставки"><p class="eyebrow">ПРОДОЛЖИТЬ МАРШРУТ</p><div class="chapter-nav__grid"><a class="chapter-nav__card" href="technology.html"><span class="chapter-nav__direction">← Предыдущая глава</span><strong>Технологии</strong><span class="chapter-nav__summary">Как модели создают результат</span></a><a class="chapter-nav__card chapter-nav__card--next" href="gallery.html"><span class="chapter-nav__direction">Следующая глава →</span><strong>Медиа</strong><span class="chapter-nav__summary">Изображения, видео и их происхождение</span></a></div><ol class="journey-progress"><li><a href="index.html"><span>01</span><span>Выставка</span></a></li><li><a href="technology.html"><span>02</span><span>Технологии</span></a></li><li><a href="experiment.html" aria-current="step"><span>03</span><span>Эксперименты</span></a></li><li><a href="gallery.html"><span>04</span><span>Медиа</span></a></li><li><a href="survey.html"><span>05</span><span>Анкета</span></a></li></ol></nav></main><footer class="site-footer"><div class="footer-inner">
 <a class="brand" href="index.html" aria-label="GENESIS AI — главная"><img src="assets/brand/genesis-mark.svg" alt="" width="34" height="34"><span class="brand-name">GENESIS <b>AI</b></span></a><p>Учебная цифровая выставка<br>«Искусственный интеллект: генеративные технологии»</p>
 <a class="footer-link" href="gallery.html">Паспорт материалов <span aria-hidden="true">→</span></a>
 </div></footer>

@@ -45,22 +45,35 @@ document.addEventListener('DOMContentLoaded', () => {
   // Laboratory 11: document background and three distinct paragraph effects.
   const ambient = document.querySelector('#ambient-trigger');
   if (ambient) {
-    const on = () => root.style.setProperty('--page-bg', '#18313a');
-    const off = () => root.style.setProperty('--page-bg', '#0b1016');
-    ambient.addEventListener('mouseenter', on);
-    ambient.addEventListener('mouseleave', off);
-    ambient.addEventListener('focus', on);
-    ambient.addEventListener('blur', off);
+    let hovered = false;
+    let focused = false;
+    const updateAmbient = () => root.style.setProperty('--page-bg', hovered || focused ? '#18313a' : '#0b1016');
+    ambient.addEventListener('mouseenter', () => { hovered = true; updateAmbient(); });
+    ambient.addEventListener('mouseleave', () => { hovered = false; updateAmbient(); });
+    ambient.addEventListener('focus', () => { focused = true; updateAmbient(); });
+    ambient.addEventListener('blur', () => { focused = false; updateAmbient(); });
   }
   document.querySelectorAll('[data-effect]').forEach(paragraph => {
-    paragraph.addEventListener('mouseenter', () => {
+    const applyEffect = () => {
       if (paragraph.dataset.effect === 'color') paragraph.style.color = '#a9efcb';
       if (paragraph.dataset.effect === 'background') paragraph.style.backgroundColor = '#344b55';
       if (paragraph.dataset.effect === 'temporary') paragraph.style.backgroundColor = '#31584f';
-    });
+    };
+    paragraph.addEventListener('mouseenter', applyEffect);
+    paragraph.addEventListener('focus', applyEffect);
     if (paragraph.dataset.effect === 'temporary') {
-      paragraph.addEventListener('mouseleave', () => { paragraph.style.backgroundColor = ''; });
+      const clearTemporary = () => {
+        if (!paragraph.matches(':hover, :focus')) paragraph.style.backgroundColor = '';
+      };
+      paragraph.addEventListener('mouseleave', clearTemporary);
+      paragraph.addEventListener('blur', clearTemporary);
     }
+  });
+  document.querySelector('#hover-reset')?.addEventListener('click', () => {
+    document.querySelectorAll('[data-effect]').forEach(paragraph => {
+      paragraph.style.color = '';
+      paragraph.style.backgroundColor = '';
+    });
   });
 
   const comparison = document.querySelector('#comparison');
@@ -69,6 +82,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const update = () => comparison.style.setProperty('--split', `${range.value}%`);
     range.addEventListener('input', update);
     update();
+    const images = [...comparison.querySelectorAll('img')];
+    Promise.all(images.map(img => img.complete ? Promise.resolve() : new Promise(resolve => {
+      img.addEventListener('load', resolve, { once: true });
+      img.addEventListener('error', resolve, { once: true });
+    }))).then(() => {
+      comparison.classList.remove('is-loading');
+      comparison.removeAttribute('aria-busy');
+    });
   }
 
   // The gallery uses real files; the modal only changes how they are viewed.

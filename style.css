@@ -109,6 +109,8 @@ p { color: var(--muted); }
 
 /* Experiments */
 .compare { --split: 50%; position: relative; width: min(100%, 920px); aspect-ratio: 16 / 9; margin: 0 auto; border: 1px solid #8ab6a6; border-radius: var(--radius); overflow: hidden; background: var(--surface); }
+.compare-loading { display: none; }
+.js-ready .compare.is-loading .compare-loading { position: absolute; z-index: 4; inset: 0; display: grid; place-items: center; padding: 24px; background: var(--surface); color: var(--text); text-align: center; }
 .compare > img, .compare-day img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .compare-day { position: absolute; inset: 0; clip-path: inset(0 calc(100% - var(--split)) 0 0); }
 .compare-line { position: absolute; top: 0; bottom: 0; left: var(--split); width: 2px; transform: translateX(-50%); background: #fff; pointer-events: none; }
@@ -146,6 +148,8 @@ summary:focus-visible { outline-offset: 6px; }
 .insight p { margin: 5px 0 0; }
 .hover-demo { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 23px 0 10px; }
 .hover-demo p { min-height: 115px; margin: 0; padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); transition: background .25s, color .25s; }
+.hover-demo p:focus-visible { border-color: var(--mint); }
+.hover-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 30px; }
 .hover-section .text-link { margin-top: 12px; }
 
 /* Technology */
