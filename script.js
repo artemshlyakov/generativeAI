@@ -125,17 +125,5 @@ document.addEventListener('DOMContentLoaded', () => {
     survey.addEventListener('reset', () => { result.textContent = ''; });
   }
 
-  const sections = document.querySelectorAll('.reveal');
-  if (sections.length && 'IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px 60px 0px' });
-    sections.forEach(section => observer.observe(section));
-    document.body.classList.add('reveal-ready');
-  }
+
 });
