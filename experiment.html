@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#090d15">
 <title>Эксперименты — GENESIS AI</title>
 <link rel="stylesheet" href="style.css">
-<link rel="preload" as="image" href="assets/day-ai.png" fetchpriority="high">
+<link rel="preload" as="image" href="assets/day-ai.webp" fetchpriority="high">
 <script defer src="script.js"></script><meta name="description" content="GENESIS AI — интерактивная выставка о генеративном искусственном интеллекте и реальных экспериментах с изображениями и видео.">
 <link rel="icon" href="assets/brand/genesis-mark.svg">
 <link rel="alternate icon" href="assets/brand/favicon-32.png">
@@ -26,7 +26,7 @@
 <p>Слева день, справа ночь. Перемещайте ползунок мышью, касанием или стрелками клавиатуры.</p>
 </div>
 <div class="compare is-loading" id="comparison" aria-label="Интерактивное сравнение дневного и ночного изображения" aria-busy="true">
-<img src="assets/night-ai.png" alt="Ночная версия города будущего"><div class="compare-day"><img src="assets/day-ai.png" alt="Дневная версия того же города" fetchpriority="high"></div>
+<img src="assets/night-ai.webp" alt="Ночная версия города будущего"><div class="compare-day"><img src="assets/day-ai.webp" alt="Дневная версия того же города" fetchpriority="high"></div>
 <div class="compare-loading" role="status">Загружаем оба изображения для сравнения…</div>
 <div class="compare-line" aria-hidden="true"><span>↔</span></div>
 <span class="compare-label l">День</span><span class="compare-label r">Ночь</span><input id="compare-range" type="range" min="0" max="100" value="50" aria-label="Доля дневной версии">
@@ -51,7 +51,7 @@
 <p>Две независимые генерации ChatGPT Images на одну тему. У них нет общего исходного кадра.</p>
 </div>
 <div class="prompt-grid">
-<figure><img src="assets/simple-prompt-ai.png" alt="Город по короткому запросу с крупным трамваем и вывесками"><figcaption><span>КОРОТКИЙ ЗАПРОС</span><q>A futuristic city street with a tram.</q></figcaption></figure><figure><img src="assets/city-ai.png" alt="Город по подробному запросу с центральным трамваем"><figcaption><span>ПОДРОБНЫЙ ЗАПРОС</span><details class="prompt-detail"><summary>Показать полный запрос</summary><q>Create a refined cinematic concept art image for a modern digital museum exhibition about generative AI. A visionary future city boulevard at blue hour, symmetrical street-level perspective, lush planted terraces integrated in architecture, a sleek tram in the center, human-scale pedestrians, atmospheric violet and teal light, careful coherent architectural geometry, no lettering, no logo, no text. Wide 16:9 composition, editorial art direction, highly detailed but tasteful, premium science museum feel. This is an original generated visual exhibit.</q></details></figcaption></figure>
+<figure><img src="assets/simple-prompt-ai.webp" alt="Город по короткому запросу с крупным трамваем и вывесками"><figcaption><span>КОРОТКИЙ ЗАПРОС</span><q>A futuristic city street with a tram.</q></figcaption></figure><figure><img src="assets/city-ai.webp" alt="Город по подробному запросу с центральным трамваем"><figcaption><span>ПОДРОБНЫЙ ЗАПРОС</span><details class="prompt-detail"><summary>Показать полный запрос</summary><q>Create a refined cinematic concept art image for a modern digital museum exhibition about generative AI. A visionary future city boulevard at blue hour, symmetrical street-level perspective, lush planted terraces integrated in architecture, a sleek tram in the center, human-scale pedestrians, atmospheric violet and teal light, careful coherent architectural geometry, no lettering, no logo, no text. Wide 16:9 composition, editorial art direction, highly detailed but tasteful, premium science museum feel. This is an original generated visual exhibit.</q></details></figcaption></figure>
 </div>
 <div class="insight">
 <strong>Что видно</strong><p>Короткая фраза оставила модели свободу: трамвай занял большую часть кадра, добавились вывески. Подробный запрос задал симметрию, центральное расположение трамвая, свет и палитру. Это один опыт, а не доказательство, что длинный запрос всегда даёт лучший результат.</p>
@@ -63,7 +63,7 @@
 <p>Две независимые генерации по одному и тому же запросу без референса. Это результаты конкретных попыток, а не общий рейтинг моделей.</p>
 </div>
 <div class="model-grid">
-<article class="model-card"><img src="assets/city-ai.png" alt="Результат ChatGPT Images"><div>
+<article class="model-card"><img src="assets/city-ai.webp" alt="Результат ChatGPT Images"><div>
 <small>РЕЗУЛЬТАТ ПОЛУЧЕН</small><h3>ChatGPT Images</h3>
 <p>Симметрия и настроение соответствуют запросу. На трамвае встречается неразборчивый мелкий текст.</p>
 </div></article><article class="model-card"><img src="assets/model-gemini.jpeg" alt="Результат генерации изображения в Gemini по тому же запросу"><div>
