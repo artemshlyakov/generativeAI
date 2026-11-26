@@ -1,88 +1,455 @@
 <!doctype html>
 <html lang="ru">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#090d15">
-<title>Эксперименты — GENESIS AI</title>
-<link rel="stylesheet" href="style.css">
-<link rel="preload" as="image" href="assets/day-ai.png" fetchpriority="high">
-<script defer src="script.js"></script><meta name="description" content="GENESIS AI — интерактивная выставка о генеративном искусственном интеллекте и реальных экспериментах с изображениями и видео.">
-<link rel="icon" href="assets/brand/genesis-mark.svg">
-<link rel="alternate icon" href="assets/brand/favicon-32.png">
-<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
-</head>
-<body data-page="experiment">
-<a class="skip" href="#main">К содержимому</a><header class="site-header" id="site-header"><div class="header-inner">
-<a class="brand" href="index.html" aria-label="GENESIS AI — главная"><img src="assets/brand/genesis-mark.svg" alt="" width="38" height="38"><span class="brand-name">GENESIS <b>AI</b><small>Лаборатория нового</small></span></a><nav id="primary-nav" class="primary-nav" aria-label="Основная навигация"><a href="index.html">Главная</a><a href="technology.html">Технологии</a><a href="experiment.html" aria-current="page">Эксперименты</a><a href="gallery.html">Медиа</a><a href="survey.html">Анкета</a></nav><button class="menu-toggle" id="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
-</div></header><main id="main"><section class="page-lead reveal"><p class="eyebrow">03 / ЛАБОРАТОРИЯ</p>
-<h1>Управляйте<br><em>переменой.</em>
-</h1>
-<p>Реальные результаты генерации и редактирования изображений. Двигайте ползунок, читайте запросы и сравнивайте ограничения.</p></section><section class="section reveal" id="light"><div class="section-head">
-<div>
-<p class="eyebrow">ЭКСПЕРИМЕНТ 01 / IMAGE EDITING</p>
-<h2>Один город. Два времени.</h2>
-</div>
-<p>Слева день, справа ночь. Перемещайте ползунок мышью, касанием или стрелками клавиатуры.</p>
-</div>
-<div class="compare is-loading" id="comparison" aria-label="Интерактивное сравнение дневного и ночного изображения" aria-busy="true">
-<img src="assets/night-ai.png" alt="Ночная версия города будущего"><div class="compare-day"><img src="assets/day-ai.png" alt="Дневная версия того же города" fetchpriority="high"></div>
-<div class="compare-loading" role="status">Загружаем оба изображения для сравнения…</div>
-<div class="compare-line" aria-hidden="true"><span>↔</span></div>
-<span class="compare-label l">День</span><span class="compare-label r">Ночь</span><input id="compare-range" type="range" min="0" max="100" value="50" aria-label="Доля дневной версии">
-</div>
-<p class="compare-hint">Передвиньте границу для сравнения <span aria-hidden="true">↔</span></p>
-<div class="caption-grid">
-<p><b>Модель:</b> ChatGPT Images. Два независимых редактирования одного исходного кадра. Точная версия модели не показана инструментом. <b>Дата:</b> 05.11.2026.</p>
-<p><b>Наблюдение:</b> башни, мосты, рельсы и положение трамвая близки; мелкие детали, фигуры людей и отдельные элементы фасадов не совпадают идеально.</p>
-</div>
-<details><summary>Исходный запрос и инструкции редактирования</summary><div class="details-body">
-<h3>Базовый кадр</h3>
-<p>Create a refined cinematic concept art image for a modern digital museum exhibition about generative AI. A visionary future city boulevard at blue hour, symmetrical street-level perspective, lush planted terraces integrated in architecture, a sleek tram in the center, human-scale pedestrians, atmospheric violet and teal light, careful coherent architectural geometry, no lettering, no logo, no text. Wide 16:9 composition, editorial art direction, highly detailed but tasteful, premium science museum feel. This is an original generated visual exhibit.</p>
-<h3>День</h3>
-<p>Edit the supplied image as an architectural continuity study. Produce a photorealistic clear DAY version of precisely the same future-city boulevard. Preserve the exact framing and perspective, every major building outline, the left and right curved rooflines, central slender towers and two bridges, tree positions, sidewalk and rail lines, and the tram's position and silhouette. Change ONLY lighting and atmosphere: crisp late morning sun, pale cyan sky, believable daylight reflections, natural green foliage, illuminated by sunlight rather than magenta lights. No new buildings, vehicles, signs or camera shift. No added text. High resolution wide composition.</p>
-<h3>Ночь</h3>
-<p>Edit the supplied image as an architectural continuity study. Produce a photorealistic NIGHT version of precisely the same future-city boulevard. Preserve the exact framing and perspective, every major building outline, left and right curved rooflines, central slender towers and two bridges, tree positions, sidewalk and rail lines, and the tram's position and silhouette. Change ONLY lighting and atmosphere: deep cobalt night sky, realistic warm windows, restrained violet and cyan architectural lighting and wet pavement reflections. Keep people and tram in the same locations. No new buildings, vehicles, signs or camera shift. No added text. High resolution wide composition.</p>
-</div></details></section><section class="section reveal" id="prompt"><div class="section-head">
-<div>
-<p class="eyebrow">ДОПОЛНИТЕЛЬНЫЙ ОПЫТ / TEXT TO IMAGE</p>
-<h2>Результат короткого запроса</h2>
-</div>
-<p>Две независимые генерации ChatGPT Images на одну тему. У них нет общего исходного кадра.</p>
-</div>
-<div class="prompt-grid">
-<figure><img src="assets/simple-prompt-ai.png" alt="Город по короткому запросу с крупным трамваем и вывесками"><figcaption><span>КОРОТКИЙ ЗАПРОС</span><q>A futuristic city street with a tram.</q></figcaption></figure><figure><img src="assets/city-ai.png" alt="Город по подробному запросу с центральным трамваем"><figcaption><span>ПОДРОБНЫЙ ЗАПРОС</span><details class="prompt-detail"><summary>Показать полный запрос</summary><q>Create a refined cinematic concept art image for a modern digital museum exhibition about generative AI. A visionary future city boulevard at blue hour, symmetrical street-level perspective, lush planted terraces integrated in architecture, a sleek tram in the center, human-scale pedestrians, atmospheric violet and teal light, careful coherent architectural geometry, no lettering, no logo, no text. Wide 16:9 composition, editorial art direction, highly detailed but tasteful, premium science museum feel. This is an original generated visual exhibit.</q></details></figcaption></figure>
-</div>
-<div class="insight">
-<strong>Что видно</strong><p>Короткая фраза оставила модели свободу: трамвай занял большую часть кадра, добавились вывески. Подробный запрос задал симметрию, центральное расположение трамвая, свет и палитру. Это один опыт, а не доказательство, что длинный запрос всегда даёт лучший результат.</p>
-</div></section><section class="section reveal" id="models"><div class="section-head">
-<div>
-<p class="eyebrow">ЭКСПЕРИМЕНТ 03 / СРАВНЕНИЕ</p>
-<h2>Одна задача. Две модели.</h2>
-</div>
-<p>Две независимые генерации по одному и тому же запросу без референса. Это результаты конкретных попыток, а не общий рейтинг моделей.</p>
-</div>
-<div class="model-grid">
-<article class="model-card"><img src="assets/city-ai.png" alt="Результат ChatGPT Images"><div>
-<small>01 / РЕЗУЛЬТАТ ПОЛУЧЕН</small><h3>ChatGPT Images</h3>
-<p>Симметрия и настроение соответствуют запросу. На трамвае встречается неразборчивый мелкий текст.</p>
-</div></article><article class="model-card"><img src="assets/model-gemini.jpeg" alt="Результат генерации изображения в Gemini по тому же запросу"><div>
-<small>02 / РЕЗУЛЬТАТ ПОЛУЧЕН · 05.11.2026</small><h3>Gemini Images</h3>
-<p>Трамвай смещён вправо, пешеходов больше, силуэт купола задаёт дальний план. На табло трамвая есть нечитаемый текст. Бесплатный режим Gemini; интерфейс не показал точный идентификатор модели.</p>
-</div></article>
-</div>
-<div class="insight">
-<strong>Одинаковые критерии</strong><p>Соответствие запросу, композиция, архитектура, положение трамвая, мелкие детали и текст. Одинаковый текст запроса приведён выше; в Gemini отдельно выбран формат 16:9. Оба результата получены с одной попытки.</p>
-</div></section><section class="section reveal" id="video"><div class="section-head"><div><p class="eyebrow">ЭКСПЕРИМЕНТ 02 / ГЕНЕРАЦИЯ ВИДЕО</p><h2>Оживший город</h2></div><p>Исходное изображение становится коротким видеороликом.</p></div><figure class="video-exhibit"><video controls playsinline preload="metadata" poster="assets/city-ai.png" aria-label="Видеоролик, созданный Google Vids Omni"><source src="assets/city-animated-google-vids.mp4" type="video/mp4">Ваш браузер не поддерживает воспроизведение MP4.</video><figcaption><strong>Модель:</strong> Google Vids · Omni. Изображение города использовано как исходный кадр.</figcaption></figure><details><summary>Задача и запрос</summary><div class="details-body"><p><b>Задача:</b> оживить статичное изображение города и создать короткий ролик на его основе.</p><p lang="en">Animate the uploaded image as the exact opening frame. Keep the same boulevard, buildings, bridges, trees, tram tracks, camera angle and composition throughout. The single tram glides slowly toward the camera along its rails; pedestrians walk naturally, greenery sways gently. A very gentle forward camera push. No cuts, no text overlays.</p></div></details></section><section class="section reveal" id="audio"><div class="section-head"><div><p class="eyebrow">ЭКСПЕРИМЕНТ 03 / ГЕНЕРАЦИЯ МУЗЫКИ</p><h2>Музыка по запросу</h2></div><p>Песня о выполнении учебного задания по теме генеративного ИИ.</p></div><div class="media-pending sound"><span>АУДИОФАЙЛ ОЖИДАЕТСЯ</span><h3>Suno</h3><p>После добавления аудиофайла этот блок станет музыкальным проигрывателем.</p></div><details><summary>Промпт</summary><div class="details-body"><p>Сгенерируй песню о выполнении домашнего задания по предмету «Введение в профессию» на тему генеративного искусственного интеллекта.</p></div></details></section><section class="section hover-section reveal"><p class="eyebrow">ЛАБОРАТОРНАЯ №11 / СОБЫТИЯ</p>
-<h2>Страница отвечает на действия</h2>
-<div class="hover-demo">
-<p data-effect="color">При наведении цвет этого текста меняется.</p>
-<p data-effect="background">При наведении меняется фон этого абзаца.</p>
-<p data-effect="temporary">Фон этого абзаца меняется только пока курсор находится над ним.</p>
-</div>
-<p id="ambient-trigger" class="ambient-trigger">Наведите на этот текст — фон страницы изменится.</p></section><nav class="chapter-nav section" aria-label="Маршрут выставки"><p class="eyebrow">ПРОДОЛЖИТЬ МАРШРУТ</p><div class="chapter-nav__grid"><a class="chapter-nav__card" href="technology.html"><span class="chapter-nav__direction">← Предыдущая глава</span><strong>Технологии</strong><span class="chapter-nav__summary">Как модели создают результат</span></a><a class="chapter-nav__card chapter-nav__card--next" href="gallery.html"><span class="chapter-nav__direction">Следующая глава →</span><strong>Медиа</strong><span class="chapter-nav__summary">Изображения, видео и их происхождение</span></a></div><ol class="journey-progress"><li><a href="index.html"><span>01</span><span>Главная</span></a></li><li><a href="technology.html"><span>02</span><span>Технологии</span></a></li><li><a href="experiment.html" aria-current="step"><span>03</span><span>Эксперименты</span></a></li><li><a href="gallery.html"><span>04</span><span>Медиа</span></a></li><li><a href="survey.html"><span>05</span><span>Анкета</span></a></li></ol></nav></main><footer class="site-footer"><div class="footer-inner">
-<a class="brand" href="index.html" aria-label="GENESIS AI — главная"><img src="assets/brand/genesis-mark.svg" alt="" width="34" height="34"><span class="brand-name">GENESIS <b>AI</b></span></a><p>Учебная цифровая выставка<br>«Искусственный интеллект: генеративные технологии»</p>
-<a class="footer-link" href="gallery.html">Паспорт материалов <span aria-hidden="true">→</span></a>
-</div></footer>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#090d15" />
+    <title>Эксперименты — GENESIS AI</title>
+    <link
+      rel="preload"
+      href="assets/fonts/manrope-variable.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/day-ai.webp"
+      fetchpriority="high"
+    />
+    <script defer src="script.js"></script>
+    <meta
+      name="description"
+      content="GENESIS AI — интерактивная выставка о генеративном искусственном интеллекте и реальных экспериментах с изображениями, видео и музыкой."
+    />
+    <link rel="icon" href="assets/brand/genesis-mark.svg" />
+    <link rel="alternate icon" href="assets/brand/favicon-32.png" />
+    <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
+  </head>
+  <body data-page="experiment">
+    <a class="skip" href="#main">К содержимому</a>
+    <header class="site-header" id="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="GENESIS AI — главная"
+          ><img
+            src="assets/brand/genesis-mark.svg"
+            alt=""
+            width="38"
+            height="38"
+          /><span class="brand-name"
+            >GENESIS <b>AI</b><small>Лаборатория нового</small></span
+          ></a
+        >
+        <nav
+          id="primary-nav"
+          class="primary-nav"
+          aria-label="Основная навигация"
+        >
+          <a href="index.html">Главная</a
+          ><a href="technology.html">Технологии</a
+          ><a href="experiment.html" aria-current="page">Эксперименты</a
+          ><a href="gallery.html">Медиа</a><a href="survey.html">Анкета</a>
+        </nav>
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-controls="primary-nav"
+          aria-expanded="false"
+          aria-label="Открыть меню"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <main id="main">
+      <section class="page-lead reveal">
+        <p class="eyebrow">ПРАКТИКА / ТРИ ЭКСПЕРИМЕНТА</p>
+        <h1>От кадра<br /><em>к впечатлению.</em></h1>
+        <p>
+          Один замысел, три результата. Сравните свет в городе будущего,
+          посмотрите, как он оживает, и послушайте песню, созданную по учебной
+          теме.
+        </p>
+        <nav class="section-index" aria-label="Эксперименты">
+          <a href="#light">Изображения</a><a href="#video">Видео</a
+          ><a href="#audio">Музыка</a>
+        </nav>
+      </section>
+      <section class="section experiment-section reveal" id="light">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">ЭКСПЕРИМЕНТ 01 / ИЗОБРАЖЕНИЯ</p>
+            <h2>Один город.<br /><em>Два времени.</em></h2>
+          </div>
+          <p>
+            Задача — изменить освещение исходного города, сохранив архитектуру и
+            ракурс.
+          </p>
+        </div>
+        <div class="exhibit-meta">
+          <span>ChatGPT Images</span><span>Редактирование изображения</span
+          ><span>05.11.2026</span>
+        </div>
+        <div
+          class="compare is-loading"
+          id="comparison"
+          aria-label="Интерактивное сравнение дневного и ночного изображения"
+          aria-busy="true"
+        >
+          <img src="assets/night-ai.webp" alt="Ночная версия города будущего" />
+          <div class="compare-day">
+            <img
+              src="assets/day-ai.webp"
+              alt="Дневная версия того же города"
+              fetchpriority="high"
+            />
+          </div>
+          <div class="compare-loading" role="status">
+            Загружаем оба изображения для сравнения…
+          </div>
+          <div class="compare-line" aria-hidden="true"><span>↔</span></div>
+          <span class="compare-label l">День</span
+          ><span class="compare-label r">Ночь</span
+          ><input
+            id="compare-range"
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            aria-label="Доля дневной версии"
+          />
+        </div>
+        <p class="compare-hint">
+          Двигайте границу мышью, касанием или стрелками клавиатуры.
+        </p>
+        <p class="result-note">
+          <b>Результат.</b> Общая композиция сохранена. Изменились свет, окна и
+          отражения; мелкие детали фасадов и фигуры людей различаются.
+        </p>
+        <details>
+          <summary>Промпты и исходный кадр</summary>
+          <div class="details-body">
+            <p>
+              Оба варианта — независимые редактирования одного базового кадра.
+              Ниже приведены оригинальные запросы из паспорта проекта. Точная
+              версия ChatGPT Images инструментом не указана.
+            </p>
+            <h3>Базовое изображение</h3>
+            <p lang="en">
+              Create a refined cinematic concept art image for a modern digital
+              museum exhibition about generative AI. A visionary future city
+              boulevard at blue hour, symmetrical street-level perspective, lush
+              planted terraces integrated in architecture, a sleek tram in the
+              center, human-scale pedestrians, atmospheric violet and teal
+              light, careful coherent architectural geometry, no lettering, no
+              logo, no text. Wide 16:9 composition, editorial art direction,
+              highly detailed but tasteful, premium science museum feel. This is
+              an original generated visual exhibit.
+            </p>
+            <h3>Дневная версия</h3>
+            <p lang="en">
+              Edit the supplied image as an architectural continuity study.
+              Produce a photorealistic clear DAY version of precisely the same
+              future-city boulevard. Preserve the exact framing and perspective,
+              every major building outline, the left and right curved rooflines,
+              central slender towers and two bridges, tree positions, sidewalk
+              and rail lines, and the tram's position and silhouette. Change
+              ONLY lighting and atmosphere: crisp late morning sun, pale cyan
+              sky, believable daylight reflections, natural green foliage,
+              illuminated by sunlight rather than magenta lights. No new
+              buildings, vehicles, signs or camera shift. No added text. High
+              resolution wide composition.
+            </p>
+            <h3>Ночная версия</h3>
+            <p lang="en">
+              Edit the supplied image as an architectural continuity study.
+              Produce a photorealistic NIGHT version of precisely the same
+              future-city boulevard. Preserve the exact framing and perspective,
+              every major building outline, left and right curved rooflines,
+              central slender towers and two bridges, tree positions, sidewalk
+              and rail lines, and the tram's position and silhouette. Change
+              ONLY lighting and atmosphere: deep cobalt night sky, realistic
+              warm windows, restrained violet and cyan architectural lighting
+              and wet pavement reflections. Keep people and tram in the same
+              locations. No new buildings, vehicles, signs or camera shift. No
+              added text. High resolution wide composition.
+            </p>
+          </div>
+        </details>
+        <details class="model-study" id="models">
+          <summary>Дополнительно: одна задача, две модели</summary>
+          <div class="details-body">
+            <p>
+              Независимые генерации по одному базовому запросу, без
+              изображения-референса. Это два отдельных результата, а не рейтинг
+              инструментов.
+            </p>
+            <div class="model-grid">
+              <article class="model-card">
+                <img
+                  loading="lazy"
+                  src="assets/city-ai.webp"
+                  alt="Город будущего, созданный ChatGPT Images"
+                />
+                <div>
+                  <h3>ChatGPT Images</h3>
+                  <p>
+                    Симметричная композиция, трамвай в центре, зелёные террасы.
+                    На трамвае есть неразборчивые мелкие надписи.
+                  </p>
+                </div>
+              </article>
+              <article class="model-card">
+                <img
+                  loading="lazy"
+                  src="assets/model-gemini.webp"
+                  alt="Город будущего, созданный Gemini Images"
+                />
+                <div>
+                  <h3>Gemini Images</h3>
+                  <p>
+                    Трамвай смещён вправо, больше прохожих, в глубине — купол.
+                    Точный идентификатор модели интерфейс не сообщил.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <p class="archive-note">
+              Оценивайте соответствие запросу, композицию и мелкие детали.
+              Полный общий запрос — в блоке выше.
+            </p>
+          </div>
+        </details>
+      </section>
+      <section class="section experiment-section reveal" id="video">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">ЭКСПЕРИМЕНТ 02 / ВИДЕО</p>
+            <h2>Город приходит<br /><em>в движение.</em></h2>
+          </div>
+          <p>
+            Задача — оживить готовое изображение: добавить движение трамвая,
+            прохожих и камеры.
+          </p>
+        </div>
+        <div class="exhibit-meta">
+          <span>Google Vids · Omni</span><span>Изображение в видео</span
+          ><span>10 секунд</span>
+        </div>
+        <div class="video-workflow">
+          <figure class="source-frame">
+            <img
+              loading="lazy"
+              src="assets/city-ai.webp"
+              alt="Исходное изображение города для анимации"
+            />
+            <figcaption>Исходный кадр<br /><b>ChatGPT Images</b></figcaption>
+          </figure>
+          <figure class="video-exhibit">
+            <video
+              controls
+              playsinline
+              preload="metadata"
+              poster="assets/city-ai.webp"
+              aria-label="Оживший город — Google Vids Omni"
+            >
+              <source
+                src="assets/city-animated-google-vids.mp4"
+                type="video/mp4"
+              />
+              Ваш браузер не поддерживает MP4.
+            </video>
+            <figcaption>Результат · Google Vids, модель Omni</figcaption>
+          </figure>
+        </div>
+        <p class="result-note">
+          <b>Результат.</b> Трамвай приближается, люди идут, камера плавно
+          движется вдоль бульвара. Основные здания сохранены; мелкие детали
+          местами меняются. Знак генератора оставлен в кадре.
+        </p>
+        <details>
+          <summary>Промпт и параметры видео</summary>
+          <div class="details-body">
+            <p>Оригинальный запрос из паспорта материалов:</p>
+            <p lang="en">
+              Animate the uploaded image as the exact opening frame. Keep the
+              same boulevard, buildings, bridges, trees, tram tracks, camera
+              angle and composition throughout. The single tram glides slowly
+              toward the camera along its rails; pedestrians on both sidewalks
+              walk naturally at different speeds; cherry blossoms and hanging
+              greenery sway gently in a light breeze. Reflections from the
+              violet and teal lights shimmer subtly on the pavement. A very
+              gentle forward camera push, stable and cinematic. Dusk lighting
+              remains consistent. No new vehicles, no extra people suddenly
+              appearing, no morphing architecture, no cuts, no text overlays.
+              Natural, physically coherent motion.
+            </p>
+            <p>
+              Google Vids, «Анимировать», Omni, 720p, горизонтально, 10 с.
+              Экспорт: H.264/AAC, 1920×1080, 30 кадров/с, 10,09 с. Разрешение
+              экспорта не определяет исходное разрешение генерации. Версия Omni
+              не уточнялась; этот ролик не приписывается Veo.
+            </p>
+          </div>
+        </details>
+        <details class="comparison-slot">
+          <summary>Сравнение с другой моделью</summary>
+          <div class="details-body">
+            <p>
+              Второй ролик пока не предоставлен. Здесь можно будет сравнить
+              движение камеры, сохранность архитектуры и детали двух генераций
+              по одному исходному кадру.
+            </p>
+          </div>
+        </details>
+      </section>
+      <section class="section experiment-section reveal" id="audio">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">ЭКСПЕРИМЕНТ 03 / МУЗЫКА</p>
+            <h2>Идея обретает<br /><em>звучание.</em></h2>
+          </div>
+          <p>
+            Задача — создать песню о домашнем задании по предмету «Введение в
+            профессию» и генеративном ИИ.
+          </p>
+        </div>
+        <figure class="music-player">
+          <div class="record-art" aria-hidden="true">
+            <div class="record-disc">
+              <span>GENESIS<br /><b>AI</b></span>
+            </div>
+            <span class="record-caption">SOUND OF AN IDEA</span>
+          </div>
+          <div class="music-copy">
+            <p class="eyebrow">SUNO / АВТОРСКИЙ ЭКСПЕРИМЕНТ</p>
+            <h3>Домашнее задание:<br />генеративный ИИ</h3>
+            <p>
+              От учебной темы — к полноценной песне. Композиция создана автором
+              проекта в Suno.
+            </p>
+            <img
+              class="audio-wave"
+              src="assets/suno-waveform.svg"
+              alt=""
+              width="640"
+              height="72"
+            /><audio
+              controls
+              preload="metadata"
+              aria-label="Песня о задании по введению в профессию"
+            >
+              <source
+                src="assets/suno-introduction-to-profession.mp3"
+                type="audio/mpeg"
+              />
+              Ваш браузер не поддерживает MP3.
+              <a href="assets/suno-introduction-to-profession.mp3"
+                >Скачать композицию</a
+              >.
+            </audio>
+            <p class="music-caption">
+              Suno · 2 мин 41 с · музыкальная генерация
+            </p>
+          </div>
+        </figure>
+        <p class="result-note">
+          <b>Результат.</b> Готовая музыкальная композиция по теме задания.
+          Нажмите воспроизведение, чтобы оценить звучание и связь песни с
+          исходной идеей.
+        </p>
+        <details>
+          <summary>Промпт и сведения о композиции</summary>
+          <div class="details-body">
+            <p>Запрос предоставлен автором проекта:</p>
+            <blockquote>
+              Сгенерируй песню о выполнении домашнего задания по предмету
+              «Введение в профессию» на тему генеративного искусственного
+              интеллекта.
+            </blockquote>
+            <p>
+              Инструмент — Suno. MP3 предоставлен автором; точная версия модели
+              и дата генерации не указаны. Название на сайте — выставочная
+              подпись композиции.
+            </p>
+          </div>
+        </details>
+      </section>
+      <section class="section hover-section reveal">
+        <p class="eyebrow">ЛАБОРАТОРНАЯ №11 / СОБЫТИЯ</p>
+        <h2>Страница отвечает на действия</h2>
+        <div class="hover-demo">
+          <p data-effect="color">При наведении цвет этого текста меняется.</p>
+          <p data-effect="background">
+            При наведении меняется фон этого абзаца.
+          </p>
+          <p data-effect="temporary">
+            Фон этого абзаца меняется только пока курсор находится над ним.
+          </p>
+        </div>
+        <p id="ambient-trigger" class="ambient-trigger">
+          Наведите на этот текст — фон страницы изменится.
+        </p>
+      </section>
+      <nav class="chapter-nav section" aria-label="Маршрут выставки">
+        <p class="eyebrow">ПРОДОЛЖИТЬ МАРШРУТ</p>
+        <div class="chapter-nav__grid">
+          <a class="chapter-nav__card" href="technology.html"
+            ><span class="chapter-nav__direction">Предыдущая глава</span
+            ><strong>Технологии</strong
+            ><span class="chapter-nav__summary"
+              >Как модели создают результат</span
+            ></a
+          ><a
+            class="chapter-nav__card chapter-nav__card--next"
+            href="gallery.html"
+            ><span class="chapter-nav__direction">Следующая глава</span
+            ><strong>Медиа</strong
+            ><span class="chapter-nav__summary"
+              >Изображения, видео, музыка</span
+            ></a
+          >
+        </div>
+        <ol class="journey-progress">
+          <li>
+            <a href="index.html"><span>01</span><span>Главная</span></a>
+          </li>
+          <li>
+            <a href="technology.html"><span>02</span><span>Технологии</span></a>
+          </li>
+          <li>
+            <a href="experiment.html" aria-current="step"
+              ><span>03</span><span>Эксперименты</span></a
+            >
+          </li>
+          <li>
+            <a href="gallery.html"><span>04</span><span>Медиа</span></a>
+          </li>
+          <li>
+            <a href="survey.html"><span>05</span><span>Анкета</span></a>
+          </li>
+        </ol>
+      </nav>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="brand" href="index.html" aria-label="GENESIS AI — главная"
+          ><img
+            src="assets/brand/genesis-mark.svg"
+            alt=""
+            width="34"
+            height="34"
+          /><span class="brand-name">GENESIS <b>AI</b></span></a
+        >
+        <p>
+          Учебная цифровая выставка<br />«Искусственный интеллект: генеративные
+          технологии»
+        </p>
+        <a class="footer-link" href="gallery.html">Паспорт материалов</a>
+      </div>
+    </footer>
+  </body>
 </html>

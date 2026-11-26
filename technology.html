@@ -1,99 +1,497 @@
 <!doctype html>
 <html lang="ru">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#090d15">
-<title>Как это работает — GENESIS AI</title>
-<link rel="stylesheet" href="style.css">
-<script defer src="script.js"></script><meta name="description" content="GENESIS AI — интерактивная выставка о генеративном искусственном интеллекте и реальных экспериментах с изображениями и видео.">
-<link rel="icon" href="assets/brand/genesis-mark.svg">
-<link rel="alternate icon" href="assets/brand/favicon-32.png">
-<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
-</head>
-<body data-page="technology">
-<a class="skip" href="#main">К содержимому</a><header class="site-header" id="site-header"><div class="header-inner">
-<a class="brand" href="index.html" aria-label="GENESIS AI — главная"><img src="assets/brand/genesis-mark.svg" alt="" width="38" height="38"><span class="brand-name">GENESIS <b>AI</b><small>Лаборатория нового</small></span></a><nav id="primary-nav" class="primary-nav" aria-label="Основная навигация"><a href="index.html">Главная</a><a href="technology.html" aria-current="page">Технологии</a><a href="experiment.html">Эксперименты</a><a href="gallery.html">Медиа</a><a href="survey.html">Анкета</a></nav><button class="menu-toggle" id="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span><span></span></button>
-</div></header><main id="main"><section class="page-lead reveal"><p class="eyebrow">02 / ТЕХНОЛОГИИ</p>
-<h1>От данных<br><em>к новому.</em>
-</h1>
-<p>Генеративный ИИ создаёт текст, изображение и другие материалы по запросу. Результат формируется на основе закономерностей, изученных моделью во время обучения, а не берётся как готовый файл из архива.</p></section><section class="section reveal"><div class="section-head">
-<div>
-<p class="eyebrow">01 / ПРИНЦИП</p>
-<h2>Как рождается результат</h2>
-</div>
-<p>Разные архитектуры работают по-разному. Общая схема помогает понять роль пользователя и модели.</p>
-</div>
-<ol class="process">
-<li>
-<span>01</span><div>
-<h3>Обучение</h3>
-<p>Модель настраивает параметры на больших наборах данных и учится статистическим связям между словами, звуками или визуальными признаками.</p>
-</div>
-</li>
-<li>
-<span>02</span><div>
-<h3>Условие</h3>
-<p>Запрос и, при редактировании, исходное изображение задают тему и ограничения. Уточнение света не гарантирует сохранения каждого объекта.</p>
-</div>
-</li>
-<li>
-<span>03</span><div>
-<h3>Генерация</h3>
-<p>Языковая модель предсказывает продолжение текста по частям. Модель изображения строит визуальный результат по своему алгоритму; конкретные этапы зависят от архитектуры и сервиса.</p>
-</div>
-</li>
-<li>
-<span>04</span><div>
-<h3>Проверка</h3>
-<p>Человек оценивает смысл, факты, детали и права на материалы, исправляет запрос или отбирает удачный результат.</p>
-</div>
-</li>
-</ol></section><section class="section reveal"><p class="eyebrow">02 / НАПРАВЛЕНИЯ</p>
-<h2>Один принцип. Разные медиа.</h2>
-<div class="info-grid">
-<article><span>ТЕКСТ</span><h3>GPT, Claude, Gemini</h3>
-<p>Пишут, объясняют, помогают с кодом. Связный текст может содержать вымышленные сведения и ссылки.</p></article><article><span>ИЗОБРАЖЕНИЯ</span><h3>ChatGPT Images, Nano Banana</h3>
-<p>Создают изображения по описанию и редактируют референсы. Сложно обеспечить идеальную непрерывность мелких деталей.</p></article><article><span>ВИДЕО</span><h3>Veo, Runway</h3>
-<p>Генерируют движение по тексту или исходному кадру. Важно проверить постоянство архитектуры и естественность действий.</p></article><article><span>ЗВУК</span><h3>Lyria, Suno, ElevenLabs</h3>
-<p>Создают музыку или речь. Учитывайте условия использования, качество произношения и права на итоговый файл.</p></article>
-</div></section><section class="section reveal"><p class="eyebrow">03 / КРИТЕРИИ</p>
-<h2>Красиво — не значит верно</h2>
-<div class="table-wrap"><table>
-<caption>Что оценивать в результате генерации</caption>
-<thead><tr>
-<th>Материал</th>
-<th>Задача</th>
-<th>Проверка</th>
-</tr></thead>
-<tbody>
-<tr>
-<th>Текст</th>
-<td>Описание технологии</td>
-<td>Факты, источники, логика</td>
-</tr>
-<tr>
-<th>Изображение</th>
-<td>Улица будущего</td>
-<td>Ракурс, архитектура, текст на вывесках</td>
-</tr>
-<tr>
-<th>Видео</th>
-<td>Движение трамвая</td>
-<td>Согласованность объектов между кадрами</td>
-</tr>
-<tr>
-<th>Аудио</th>
-<td>Музыкальная атмосфера</td>
-<td>Звучание, повторения, лицензия</td>
-</tr>
-</tbody>
-</table></div></section><section class="section statement reveal"><p class="eyebrow">04 / ГРАНИЦЫ</p>
-<h2>Проверять данные. Уважать права.<br><em>Не скрывать происхождение.</em>
-</h2>
-<p>Не отправляйте в публичный генератор конфиденциальные сведения без разрешения. Проверяйте условия использования сервиса и указывайте происхождение материалов: на этой выставке оно подписано для каждого изображения и видео.</p></section><nav class="chapter-nav section" aria-label="Маршрут выставки"><p class="eyebrow">ПРОДОЛЖИТЬ МАРШРУТ</p><div class="chapter-nav__grid"><a class="chapter-nav__card" href="index.html"><span class="chapter-nav__direction">← Предыдущая глава</span><strong>Главная</strong><span class="chapter-nav__summary">Знакомство с темой и маршрутом</span></a><a class="chapter-nav__card chapter-nav__card--next" href="experiment.html"><span class="chapter-nav__direction">Следующая глава →</span><strong>Эксперименты</strong><span class="chapter-nav__summary">Проверка идей на реальных изображениях</span></a></div><ol class="journey-progress"><li><a href="index.html"><span>01</span><span>Главная</span></a></li><li><a href="technology.html" aria-current="step"><span>02</span><span>Технологии</span></a></li><li><a href="experiment.html"><span>03</span><span>Эксперименты</span></a></li><li><a href="gallery.html"><span>04</span><span>Медиа</span></a></li><li><a href="survey.html"><span>05</span><span>Анкета</span></a></li></ol></nav></main><footer class="site-footer"><div class="footer-inner">
-<a class="brand" href="index.html" aria-label="GENESIS AI — главная"><img src="assets/brand/genesis-mark.svg" alt="" width="34" height="34"><span class="brand-name">GENESIS <b>AI</b></span></a><p>Учебная цифровая выставка<br>«Искусственный интеллект: генеративные технологии»</p>
-<a class="footer-link" href="gallery.html">Паспорт материалов <span aria-hidden="true">→</span></a>
-</div></footer>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#090d15" />
+    <title>Как это работает — GENESIS AI</title>
+    <link
+      rel="preload"
+      href="assets/fonts/manrope-variable.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <meta
+      name="description"
+      content="GENESIS AI — интерактивная выставка о генеративном искусственном интеллекте и реальных экспериментах с изображениями, видео и музыкой."
+    />
+    <link rel="icon" href="assets/brand/genesis-mark.svg" />
+    <link rel="alternate icon" href="assets/brand/favicon-32.png" />
+    <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
+  </head>
+  <body data-page="technology">
+    <a class="skip" href="#main">К содержимому</a>
+    <header class="site-header" id="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="GENESIS AI — главная"
+          ><img
+            src="assets/brand/genesis-mark.svg"
+            alt=""
+            width="38"
+            height="38"
+          /><span class="brand-name"
+            >GENESIS <b>AI</b><small>Лаборатория нового</small></span
+          ></a
+        >
+        <nav
+          id="primary-nav"
+          class="primary-nav"
+          aria-label="Основная навигация"
+        >
+          <a href="index.html">Главная</a
+          ><a href="technology.html" aria-current="page">Технологии</a
+          ><a href="experiment.html">Эксперименты</a
+          ><a href="gallery.html">Медиа</a><a href="survey.html">Анкета</a>
+        </nav>
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-controls="primary-nav"
+          aria-expanded="false"
+          aria-label="Открыть меню"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <main id="main">
+      <section class="page-lead reveal">
+        <p class="eyebrow">ТЕХНОЛОГИИ / НАУЧНО-ПОПУЛЯРНЫЙ РАЗБОР</p>
+        <h1>От данных<br /><em>к новому.</em></h1>
+        <p>
+          Как машина создаёт то, чего раньше не было? Разбираемся в обучении
+          моделей, языке запросов и технологиях, которые стоят за изображением,
+          видео и музыкой.
+        </p>
+        <p class="reading-meta">
+          Около 8 минут чтения · источники проверены 26 ноября 2026
+        </p>
+      </section>
+      <div class="article-layout section">
+        <aside class="article-sidebar">
+          <nav aria-label="Содержание статьи">
+            <p class="eyebrow">В ЭТОЙ СТАТЬЕ</p>
+            <a href="#principle">Что значит «генерировать»</a
+            ><a href="#learning">Как обучается модель</a
+            ><a href="#request">Путь запроса</a
+            ><a href="#formats">Изображение, видео, музыка</a
+            ><a href="#tools">Как выбрать инструмент</a
+            ><a href="#limits">Что проверить</a
+            ><a href="#sources">Открытые источники</a>
+          </nav>
+        </aside>
+        <article class="technology-article">
+          <section id="principle">
+            <p class="eyebrow">ПРИНЦИП</p>
+            <h2>Создавать по<br /><em>изученным связям.</em></h2>
+            <p class="article-intro">
+              Генеративный искусственный интеллект — это модели, которые создают
+              новый текст, изображения, звук или видео, опираясь на
+              закономерности, найденные в данных.
+            </p>
+            <p>
+              Обычный классификатор отвечает, что изображено на фотографии.
+              Генеративная модель решает обратную задачу: строит возможное
+              изображение по условию «город будущего». Она изучает связи между
+              понятиями, формой, цветом и композицией, а затем использует их для
+              создания результата.
+            </p>
+            <p>
+              Это не простой поиск готового файла, но и не гарантия полной
+              оригинальности: модели способны воспроизводить знакомые шаблоны и
+              иногда фрагменты обучающих данных. Поэтому красивый результат всё
+              равно требует человеческой оценки.
+            </p>
+            <aside class="article-callout">
+              <strong>Модель и сервис — разные вещи</strong>
+              <p>
+                ChatGPT — приложение, в котором доступны модели и инструменты.
+                Название приложения не всегда позволяет установить точную
+                модель, создавшую конкретный файл. В наших экспериментах указано
+                только подтверждённое происхождение.
+              </p>
+            </aside>
+          </section>
+          <section id="learning">
+            <p class="eyebrow">ОБУЧЕНИЕ</p>
+            <h2>Много примеров.<br /><em>Маленькие поправки.</em></h2>
+            <p>
+              До первого пользовательского запроса модель проходит обучение.
+              Разработчики подготавливают данные, а алгоритм многократно
+              сравнивает предсказания с целевым результатом. Ошибка превращается
+              в численную функцию потерь; оптимизатор изменяет параметры сети,
+              чтобы уменьшить её на следующих примерах.
+            </p>
+            <div class="learning-loop" aria-label="Цикл обучения">
+              <span>Данные</span><span>Предсказание</span><span>Ошибка</span
+              ><span>Обновление весов</span>
+            </div>
+            <p>
+              Языковые модели часто обучают предсказывать следующий токен —
+              слово, его часть или знак. Диффузионную модель можно обучать
+              оценивать шум, добавленный к изображению: научившись этому на
+              множестве примеров, она сможет постепенно превращать шум в
+              структуру. Архитектуры и цели обучения у разных семейств
+              различаются.
+            </p>
+            <p>
+              После базового обучения могут идти дообучение на инструкциях,
+              обучение по человеческим предпочтениям и дополнительные оценки
+              качества. Они помогают модели лучше выполнять задания, но не
+              устраняют все ошибки.
+              <a
+                class="source-ref"
+                href="https://help.openai.com/en/articles/7842364-how-chatgpt-and-our-foundation-models-are-developed"
+                >О процессе обучения — OpenAI</a
+              >.
+            </p>
+            <p>
+              Обучение и использование — два разных этапа. При обычной генерации
+              модель применяет уже настроенные параметры; один новый запрос сам
+              по себе не означает немедленного переобучения её весов.
+            </p>
+          </section>
+          <section id="request">
+            <p class="eyebrow">ПУТЬ ЗАПРОСА</p>
+            <h2>Что происходит<br /><em>после «создать»?</em></h2>
+            <ol class="request-steps">
+              <li>
+                <h3>Запрос становится числами</h3>
+                <p>
+                  Текст разбивается на токены и преобразуется в числовые
+                  представления. Изображения и звук тоже кодируются — способ
+                  зависит от архитектуры. Модель работает с этими
+                  представлениями и контекстом.
+                </p>
+              </li>
+              <li>
+                <h3>Контекст задаёт связи</h3>
+                <p>
+                  Механизм внимания в трансформерах помогает учитывать, какие
+                  части входа связаны. «Ночной город с трамваем» задаёт тему и
+                  признаки сцены; референс дополнительно ограничивает
+                  композицию.
+                </p>
+              </li>
+              <li>
+                <h3>Алгоритм формирует результат</h3>
+                <p>
+                  Языковая модель выбирает следующие токены; визуальная или
+                  звуковая модель создаёт своё представление материала.
+                  Случайность и настройки генерации позволяют одному запросу
+                  давать разные результаты.
+                </p>
+              </li>
+              <li>
+                <h3>Человек отбирает и уточняет</h3>
+                <p>
+                  Результат сравнивают с задачей. Если трамвай изменил форму или
+                  песня ушла от темы, уточняют условия, редактируют материал или
+                  повторяют генерацию.
+                </p>
+              </li>
+            </ol>
+          </section>
+          <section id="formats">
+            <p class="eyebrow">ТРИ ФОРМАТА</p>
+            <h2>Кадр. Движение.<br /><em>Звучание.</em></h2>
+            <div class="format-story">
+              <span class="format-tag">ИЗОБРАЖЕНИЯ</span>
+              <h3>Связать описание с визуальным миром</h3>
+              <p>
+                В диффузионных подходах генерация постепенно убирает шум, часто
+                в сжатом пространстве признаков. Авторегрессионные подходы
+                строят представление последовательно. Поэтому объяснение «любая
+                нейросеть рисует из шума» неверно: например, OpenAI описывает
+                генерацию изображений GPT-4o как авторегрессионную.
+              </p>
+              <p>
+                При редактировании модель получает исходное изображение и
+                инструкцию. Сохранение архитектуры остаётся задачей, а не
+                гарантией: это хорошо видно на нашем сравнении дня и ночи.
+                <a
+                  class="source-ref"
+                  href="https://huggingface.co/learn/diffusion-course/en/unit1/1"
+                  >Диффузия — Hugging Face</a
+                >;
+                <a
+                  class="source-ref"
+                  href="https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf"
+                  >архитектура GPT-4o — OpenAI</a
+                >.
+              </p>
+            </div>
+            <figure class="article-visual">
+              <img
+                loading="lazy"
+                src="assets/day-ai.webp"
+                alt="Дневная версия города из первого эксперимента"
+              />
+              <figcaption>
+                Проверяемая идея: сменить свет и сохранить узнаваемость места.
+                <a href="experiment.html#light">Сравнить день и ночь</a>
+              </figcaption>
+            </figure>
+            <div class="format-story">
+              <span class="format-tag">ВИДЕО</span>
+              <h3>Добавить согласованность во времени</h3>
+              <p>
+                Видео требует создавать не только внешний вид сцены, но и её
+                изменение. Модель учитывает пространственные и временные связи:
+                трамвай должен двигаться по рельсам, а фасад — оставаться тем же
+                в соседних кадрах. Это сложнее, чем независимо сгенерировать
+                несколько красивых картинок.
+              </p>
+              <p>
+                В режиме image-to-video исходное изображение задаёт визуальную
+                отправную точку, а запрос описывает действие и камеру. Veo и
+                инструменты Runway поддерживают такие задачи; конкретный ролик
+                нашей выставки создан в Google Vids с подписью Omni. Эти
+                названия не следует подменять друг другом.
+              </p>
+            </div>
+            <div class="format-story">
+              <span class="format-tag">МУЗЫКА</span>
+              <h3>Организовать звук во времени</h3>
+              <p>
+                Музыкальные модели учатся закономерностям ритма, тембра, мелодии
+                и структуры по аудиоданным и связанным описаниям. В зависимости
+                от системы они работают с аудиотокенами, спектральными
+                представлениями или другими формами кодирования звука.
+              </p>
+              <p>
+                Suno создаёт песни с вокалом и аранжировкой по описанию; в
+                пользовательском режиме можно задать собственный текст и стиль.
+                Детальная архитектура сервиса полностью не раскрыта, поэтому не
+                приписываем ему неподтверждённый алгоритм. В нашем опыте тему
+                песни задаёт учебное задание.
+                <a
+                  class="source-ref"
+                  href="https://suno.com/tools/ai-music-generator"
+                  >О возможностях — Suno</a
+                >.
+              </p>
+            </div>
+          </section>
+          <section id="tools">
+            <p class="eyebrow">ИНСТРУМЕНТЫ</p>
+            <h2>Выбирать<br /><em>под задачу.</em></h2>
+            <p>
+              Универсальные помощники и специализированные генераторы решают
+              разные задачи. Ниже — ориентир по назначению, без рейтинга и
+              обещаний одинакового результата. Версии и доступность меняются.
+            </p>
+            <dl class="tool-directory">
+              <div>
+                <dt>ChatGPT <span>OpenAI</span></dt>
+                <dd>
+                  Объяснение идей, работа с текстом и кодом; ChatGPT Images —
+                  создание и редактирование изображений. Подходит для подготовки
+                  концепции и последовательных визуальных уточнений.
+                </dd>
+              </div>
+              <div>
+                <dt>Claude <span>Anthropic</span></dt>
+                <dd>
+                  Анализ документов, структурирование материала,
+                  программирование и рассуждения. Работа с изображениями на
+                  входе не равнозначна встроенному генератору изображений.
+                </dd>
+              </div>
+              <div>
+                <dt>Gemini <span>Google</span></dt>
+                <dd>
+                  Мультимодальная работа с текстом, изображениями, аудио и
+                  видео. Возможности зависят от выбранной модели и интерфейса.
+                </dd>
+              </div>
+              <div>
+                <dt>Nano Banana <span>Google</span></dt>
+                <dd>
+                  Название семейства возможностей генерации и редактирования
+                  изображений Gemini. Подходит для создания сцен и правок по
+                  референсам; не является отдельным универсальным чат-ботом.
+                </dd>
+              </div>
+              <div>
+                <dt>Veo · Runway <span>Видео</span></dt>
+                <dd>
+                  Сцены по описанию и анимация исходного кадра. При выборе
+                  полезно оценивать управление движением, сохранение объектов и
+                  возможности редактирования.
+                </dd>
+              </div>
+              <div>
+                <dt>Suno · Lyria <span>Музыка</span></dt>
+                <dd>
+                  Suno — песни с вокалом и инструментальные композиции. Lyria —
+                  семейство музыкальных моделей Google. Выбор зависит от того,
+                  нужен ли вокал, работа со стилем или инструментальное
+                  сопровождение.
+                </dd>
+              </div>
+            </dl>
+          </section>
+          <section id="limits">
+            <p class="eyebrow">КРИТИЧЕСКИЙ ВЗГЛЯД</p>
+            <h2>Результату нужен<br /><em>редактор.</em></h2>
+            <p>
+              Правдоподобие не равно истинности. Текст может содержать
+              вымышленные факты, изображение — противоречивые детали, видео —
+              исчезающие объекты, а песня — ошибки в словах или неудачные
+              повторы.
+            </p>
+            <ul class="editor-checks">
+              <li><b>Смысл:</b> решает ли материал исходную задачу?</li>
+              <li><b>Точность:</b> проверены ли факты, детали и источники?</li>
+              <li>
+                <b>Последовательность:</b> сохраняются ли объекты, сюжет и
+                структура?
+              </li>
+              <li>
+                <b>Происхождение:</b> указаны ли инструмент и условия
+                использования?
+              </li>
+            </ul>
+            <p>
+              Не загружайте конфиденциальные сведения без разрешения. Условия
+              использования материалов проверяйте у выбранного сервиса: наличие
+              файла само по себе не даёт универсальных прав на его
+              распространение.
+            </p>
+            <a class="button" href="experiment.html"
+              >Проверить на экспериментах</a
+            >
+          </section>
+          <section id="sources" class="article-sources">
+            <p class="eyebrow">ЧИТАТЬ ДАЛЬШЕ</p>
+            <h2>Открытые источники</h2>
+            <p>
+              Официальные описания разработчиков и учебный курс. Они объясняют
+              общие принципы и возможности сервисов, а происхождение файлов
+              выставки зафиксировано отдельно в паспорте проекта.
+            </p>
+            <ul>
+              <li>
+                <a
+                  href="https://help.openai.com/en/articles/7842364-how-chatgpt-and-our-foundation-models-are-developed"
+                  >OpenAI — как разрабатываются ChatGPT и базовые модели</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf"
+                  >OpenAI — системная карта генерации изображений GPT-4o
+                  (PDF)</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://huggingface.co/learn/diffusion-course/en/unit1/1"
+                  >Hugging Face — введение в диффузионные модели</a
+                >
+              </li>
+              <li>
+                <a href="https://platform.claude.com/docs/en/intro"
+                  >Anthropic — введение в Claude</a
+                >
+              </li>
+              <li>
+                <a href="https://ai.google.dev/gemini-api/docs/image-generation"
+                  >Google — генерация изображений Nano Banana</a
+                >
+              </li>
+              <li>
+                <a href="https://deepmind.google/models/veo/"
+                  >Google DeepMind — Veo</a
+                >
+              </li>
+              <li>
+                <a href="https://docs.dev.runwayml.com/guides/using-the-api/"
+                  >Runway — генерация видео из изображения</a
+                >
+              </li>
+              <li>
+                <a href="https://suno.com/tools/ai-music-generator"
+                  >Suno — генерация музыки и песен</a
+                >
+              </li>
+              <li>
+                <a href="https://help.suno.com/en/articles/3726721"
+                  >Suno — текст и стиль в Custom Mode</a
+                >
+              </li>
+              <li>
+                <a href="https://deepmind.google/models/lyria/"
+                  >Google DeepMind — музыкальные модели Lyria</a
+                >
+              </li>
+            </ul>
+          </section>
+        </article>
+      </div>
+      <nav class="chapter-nav section" aria-label="Маршрут выставки">
+        <p class="eyebrow">ПРОДОЛЖИТЬ МАРШРУТ</p>
+        <div class="chapter-nav__grid">
+          <a class="chapter-nav__card" href="index.html"
+            ><span class="chapter-nav__direction">Предыдущая глава</span
+            ><strong>Главная</strong
+            ><span class="chapter-nav__summary"
+              >Знакомство с темой и маршрутом</span
+            ></a
+          ><a
+            class="chapter-nav__card chapter-nav__card--next"
+            href="experiment.html"
+            ><span class="chapter-nav__direction">Следующая глава</span
+            ><strong>Эксперименты</strong
+            ><span class="chapter-nav__summary"
+              >Изображения, движение и музыка</span
+            ></a
+          >
+        </div>
+        <ol class="journey-progress">
+          <li>
+            <a href="index.html"><span>01</span><span>Главная</span></a>
+          </li>
+          <li>
+            <a href="technology.html" aria-current="step"
+              ><span>02</span><span>Технологии</span></a
+            >
+          </li>
+          <li>
+            <a href="experiment.html"
+              ><span>03</span><span>Эксперименты</span></a
+            >
+          </li>
+          <li>
+            <a href="gallery.html"><span>04</span><span>Медиа</span></a>
+          </li>
+          <li>
+            <a href="survey.html"><span>05</span><span>Анкета</span></a>
+          </li>
+        </ol>
+      </nav>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="brand" href="index.html" aria-label="GENESIS AI — главная"
+          ><img
+            src="assets/brand/genesis-mark.svg"
+            alt=""
+            width="34"
+            height="34"
+          /><span class="brand-name">GENESIS <b>AI</b></span></a
+        >
+        <p>
+          Учебная цифровая выставка<br />«Искусственный интеллект: генеративные
+          технологии»
+        </p>
+        <a class="footer-link" href="gallery.html">Паспорт материалов</a>
+      </div>
+    </footer>
+  </body>
 </html>

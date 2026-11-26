@@ -1,0 +1,412 @@
+{
+  "base": "http://127.0.0.1:8765/",
+  "results": [
+    {
+      "page": "index",
+      "width": 320,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "technology",
+      "width": 320,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "experiment",
+      "width": 320,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "gallery",
+      "width": 320,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "survey",
+      "width": 320,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "index",
+      "width": 390,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "technology",
+      "width": 390,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "experiment",
+      "width": 390,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "gallery",
+      "width": 390,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "survey",
+      "width": 390,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "index",
+      "width": 768,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "technology",
+      "width": 768,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "experiment",
+      "width": 768,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "gallery",
+      "width": 768,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "survey",
+      "width": 768,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "index",
+      "width": 1024,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "technology",
+      "width": 1024,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "experiment",
+      "width": 1024,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "gallery",
+      "width": 1024,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "survey",
+      "width": 1024,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "index",
+      "width": 1440,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "technology",
+      "width": 1440,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "experiment",
+      "width": 1440,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "gallery",
+      "width": 1440,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    },
+    {
+      "page": "survey",
+      "width": 1440,
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "nav": [
+        "Главная",
+        "Технологии",
+        "Эксперименты",
+        "Медиа",
+        "Анкета"
+      ],
+      "hiddenText": 0
+    }
+  ],
+  "mediaResults": [
+    {
+      "page": "experiment",
+      "type": "video",
+      "duration": 10.090667,
+      "time": 0.34605,
+      "error": null
+    },
+    {
+      "page": "experiment",
+      "type": "audio",
+      "duration": 161.088,
+      "time": 0.218998,
+      "error": null
+    },
+    {
+      "page": "gallery",
+      "type": "video",
+      "duration": 10.090667,
+      "time": 0.298867,
+      "error": null
+    },
+    {
+      "page": "gallery",
+      "type": "audio",
+      "duration": 161.088,
+      "time": 0.215632,
+      "error": null
+    }
+  ],
+  "errors": [],
+  "functional": "passed"
+}
