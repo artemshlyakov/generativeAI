@@ -14,38 +14,31 @@ document.addEventListener("DOMContentLoaded", () => {
     updateHeader();
   }
   if (menuButton && nav) {
-    const closeMenu = (restoreFocus = false) => {
-      menuButton.setAttribute("aria-expanded", "false");
-      menuButton.setAttribute("aria-label", "Открыть меню");
-      nav.classList.remove("is-open");
-      document.body.classList.remove("menu-open");
-      if (restoreFocus) menuButton.focus();
-    };
-    menuButton.addEventListener("click", () => {
-      const open = menuButton.getAttribute("aria-expanded") !== "true";
+    const setMenu = (open, restoreFocus = false) => {
       menuButton.setAttribute("aria-expanded", String(open));
-      menuButton.setAttribute(
-        "aria-label",
-        open ? "Закрыть меню" : "Открыть меню",
-      );
+      menuButton.setAttribute("aria-label", open ? "Закрыть меню" : "Открыть меню");
       nav.classList.toggle("is-open", open);
       document.body.classList.toggle("menu-open", open);
       if (open) nav.querySelector("a")?.focus();
+      else if (restoreFocus) menuButton.focus();
+    };
+    menuButton.addEventListener("click", () => {
+      setMenu(menuButton.getAttribute("aria-expanded") !== "true");
     });
     nav.addEventListener("click", (event) => {
-      if (event.target.closest("a")) closeMenu();
+      if (event.target.closest("a")) setMenu(false);
     });
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && nav.classList.contains("is-open"))
-        closeMenu(true);
+        setMenu(false, true);
     });
     document.addEventListener("click", (event) => {
       if (nav.classList.contains("is-open") && !header.contains(event.target))
-        closeMenu();
+        setMenu(false);
     });
     window.addEventListener("resize", () => {
       if (window.innerWidth > 1080 && nav.classList.contains("is-open"))
-        closeMenu();
+        setMenu(false);
     });
   }
 
@@ -179,24 +172,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const sections = document.querySelectorAll(".reveal");
-  if (
-    sections.length &&
-    "IntersectionObserver" in window &&
-    !window.matchMedia("(prefers-reduced-motion: reduce)").matches
-  ) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("in-view");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.08, rootMargin: "0px 0px 60px 0px" },
-    );
-    sections.forEach((section) => observer.observe(section));
-    document.body.classList.add("reveal-ready");
+  // Animate only entering content; the document never depends on hidden blocks.
+  const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (!motionPreference.matches && "IntersectionObserver" in window) {
+    const animations = new Set();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(({ target, isIntersecting }) => {
+        if (!isIntersecting) return;
+        observer.unobserve(target);
+        if (motionPreference.matches || typeof target.animate !== "function") return;
+        const animation = target.animate(
+          [{ opacity: 0, transform: "translateY(14px)" }, { opacity: 1, transform: "none" }],
+          { duration: 600, easing: "cubic-bezier(.22,1,.36,1)" },
+        );
+        animations.add(animation);
+        animation.finished.finally(() => animations.delete(animation)).catch(() => {});
+      });
+    }, { threshold: 0, rootMargin: "0px 0px -32px 0px" });
+    document.querySelectorAll(".reveal, .technology-article > section").forEach(section => observer.observe(section));
+    motionPreference.addEventListener("change", event => {
+      if (!event.matches) return;
+      observer.disconnect();
+      animations.forEach(animation => animation.cancel());
+      animations.clear();
+    });
   }
 });

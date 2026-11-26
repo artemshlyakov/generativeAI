@@ -382,28 +382,28 @@
       "page": "experiment",
       "type": "video",
       "duration": 10.090667,
-      "time": 0.34605,
+      "time": 0.369655,
       "error": null
     },
     {
       "page": "experiment",
       "type": "audio",
       "duration": 161.088,
-      "time": 0.218998,
+      "time": 0.174295,
       "error": null
     },
     {
       "page": "gallery",
       "type": "video",
       "duration": 10.090667,
-      "time": 0.298867,
+      "time": 0.321076,
       "error": null
     },
     {
       "page": "gallery",
       "type": "audio",
       "duration": 161.088,
-      "time": 0.215632,
+      "time": 0.162626,
       "error": null
     }
   ],
